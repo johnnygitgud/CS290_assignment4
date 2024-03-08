@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<h2>Cryptic Pigeon</h2>
+<!-- The line below is meant for server side stuff and wont affect the rest of the HTML -->
+<form action="/action_page.php" method="post">
+
+  <!-- The container below will hold labels, buttons, and input fields -->
+  <div class="container">
+    <label for="uname"><b>Create A Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b> Create A Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="psw"><b>Re-enter Your Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw" required>
+        
+    <button type="submit">Create Account</button>
+
+</form>
+
+</body>
+</html>
