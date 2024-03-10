@@ -19,6 +19,32 @@ var siteUsersList = [
 	}
 ]
 
+// Function to create a new user and add them to the siteUsersList array
+function createNewUser() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Log the values of username and password to check if they are received correctly
+    console.log("Username:", username);
+    console.log("Password:", password);
+
+    // Check if username already exists
+    for (var i = 0; i < siteUsersList.length; i++) {
+        if (username === siteUsersList[i].username) {
+            alert("Username already exists. Please choose a different username.");
+            return;
+        }
+    }
+
+    // Add new user to siteUsersList array
+    siteUsersList.push({username: username, password: password});
+    console.log("New user created:", username);
+
+    // Redirect user to login page
+    window.location.href = "home_page.html";
+}
+
+
 
 //Function to authenticate existing user
 function login() {
@@ -29,7 +55,7 @@ function login() {
         // check is user input matches username and password of a current index of the objPeople array
 		if (username === siteUsersList[i].username && password === siteUsersList[i].password) {
 			console.log(username + " is logged in!!!");
-			window.location.href = 'http://www.google.com';
+			window.location.href = 'crypto_pigeonUI.html';
 			return;
 		}
 	}
