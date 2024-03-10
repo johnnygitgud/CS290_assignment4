@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +6,26 @@
 </head>
 <body>
 
-<h2 >Cryptic Pigeon</h2>
-<!-- The line below is meant for server side stuff and wont affect the rest of the HTML -->
-<form action="/action_page.php" method="post">
+<h2><a href="home_page.html">Cryptic Pigeon</a></h2>
+<!-- Form holds function to create new user account-->
+<form>
 
   <!-- The container below will hold labels, buttons, and input fields -->
   <div class="container">
-    <label for="uname"><b>Create A Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <!-- Prompt for a new username -->
+    <label for="username"><b>Create A Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" required>
 
-    <label for="psw"><b> Create A Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <label for="psw"><b>Re-enter Your Password</b></label>
-    <input type="password" placeholder="Confirm Password" name="psw" required>
+    <!-- Prompt for a new password -->
+    <label for="password"><b> Create A Password</b></label>
+    <input type="password" id="password" placeholder="Enter a new Password" required>
         
-    <button type="submit">Create Account</button>
+    <button type="button" onclick="createNewUser()" >Create Account</button>
 
 </form>
+<script src="site_jscript.js"></script>
 
 </body>
 </html>
+
+

@@ -15,6 +15,12 @@ body, html {
   h2 {
     text-align: left;
   }
+
+  h2 a {
+    color: inherit; /* Use the same color as the parent element (h2) */
+    text-decoration: none; /* Remove underline */
+  }
+  
   
   form {
     max-width: 300px;
